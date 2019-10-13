@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>My details</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <div className="container" id="root">
+
+    </div>
+
+    <script type="text/babel">
+
+      class MyInformations extends React.Component{
+        render(){
+          var props = this.props;
+          return(
+            <div className="container">
+              <h5 className="display-4">My details: </h5>
+              <h1>Name: {props.name}</h1>
+              <p>Age: {props.age}</p>
+              <p>Gender: {props.gender}</p>
+              <p>Designation: {props.designation}</p>
+              <p>Company name: {props.companyName}</p>
+              <p>Interest: {props.interest}</p>
+
+              <h5 className="display-4">Education: </h5>
+              <p>School: {props.school} (science)</p>
+              <p>collage: {props.collage} (science)</p>
+              <p>University: {props.university} (Bsc in CSE)</p>
+
+              <p className="text-danger"><strong>N.B: Update will comming soon.......</strong></p>
+
+            </div>
+          )
+        }
+      }
+
+
+
+      ReactDOM.render(
+        <div>
+          <MyInformations name="Md. Rafiqul islam" age = "24" gender = "male" designation = "Web developer" interest = "Programming"  companyName = "Debug BD" school="Yearpur High School" collage="Jahangirnagar University School & Collage" university = "Independent University, Bangladesh (IUB)"/>
+        </div>,
+        document.getElementById('root')
+      );
+
+    </script>
+
+  </body>
+</html>
